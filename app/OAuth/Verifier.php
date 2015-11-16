@@ -2,7 +2,7 @@
 
 namespace CodeProject\OAuth;
 
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class Verifier
 {
