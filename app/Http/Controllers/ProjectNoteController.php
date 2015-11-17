@@ -6,8 +6,7 @@ use CodeProject\Repositories\ProjectNoteRepository;
 use CodeProject\Services\ProjectNoteService;
 use Illuminate\Http\Request;
 
-class ProjectNoteController extends Controller
-{
+class ProjectNoteController extends Controller {
     /**
      * @var ProjectNoteRepository
      */
@@ -33,8 +32,7 @@ class ProjectNoteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         return $this->repository->all();
     }
 
@@ -44,8 +42,7 @@ class ProjectNoteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         return $this->service->create($request->all());
     }
 
@@ -55,8 +52,7 @@ class ProjectNoteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         return $this->repository->find($id);
     }
 
@@ -67,8 +63,7 @@ class ProjectNoteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         return $this->service->update($request->all(), $id);
     }
 
@@ -78,8 +73,7 @@ class ProjectNoteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         return $this->repository->delete($id);
     }
 }

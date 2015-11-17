@@ -2,15 +2,13 @@
 
 use Illuminate\Database\Seeder;
 
-class UserTableSeeder extends Seeder
-{
+class UserTableSeeder extends Seeder {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run()
-    {
+    public function run() {
         factory(\CodeProject\Entities\User::class)->create([
         	'name' => 'Rafael',
 	        'email' => 'rafael.ito@db1.com.br',
