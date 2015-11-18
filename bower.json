@@ -1,0 +1,31 @@
+{
+  "name": "laravelAngularJS",
+  "description": "FrontEnd de Gerenciador de Projetos",
+  "main": "",
+  "authors": [
+    "Rafael Ito"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rafael-ito/laravelAngularJS",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "angular-resource": "~1.4.7",
+    "angular-animate": "~1.4.7",
+    "angular-messages": "~1.4.7",
+    "angular-bootstrap": "~0.14.3",
+    "angular-strap": "~2.3.6",
+    "bootstrap": "~3.3.5"
+  }
+}
