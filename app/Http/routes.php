@@ -26,10 +26,11 @@ Route::group(['middleware' => 'oauth'], function() {
 	// Route::group(['middleware' => 'checkProjectOwner'], function() {
 	// 	Route::resource('project', 'ProjectController', ['except' => ['create', 'edit']]);
 	// });
-	
+
 	Route::group(['prefix' => 'project'], function() {
 		Route::get('{id}/note', 'ProjectNoteController@index');
 		Route::post('{id}/note', 'ProjectNoteController@store');
+		Route::put('note/{idNote}', 'ProjectNoteController@update');
 		Route::get('{id}/note/{noteId}', 'ProjectNoteController@show');
 		Route::delete('note/{id}', 'ProjectNoteController@destroy');
 
