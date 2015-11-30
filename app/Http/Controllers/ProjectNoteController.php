@@ -53,7 +53,13 @@ class ProjectNoteController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($id, $idNote) {
-        return $this->repository->findWhere(['project_id' => $id, 'id' => $idNote]);
+        $result = $this->repository->findWhere(['project_id' => $id, 'id' => $idNote]);
+        if (isset($result['data']) && count($result['data']) == 1) {
+            $result = [
+                'data' => $result['data'][0]
+            ];
+        }
+        return $result;
     }
 
     /**
